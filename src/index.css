@@ -1,0 +1,563 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+  color: #2d3748;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #2c5282;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.nav-admin {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.8rem 1rem;
+  border-radius: 0.375rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s;
+  margin-right: 120px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-admin:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin:  auto;
+  padding: 0 0.5rem;
+}
+
+
+
+/* Table styles */
+.table-container {
+  width: 90%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* margin-top: 2rem; */
+  /* text-align: center; */
+  /* margin-right: -20ex; */
+  margin: 0;
+
+
+}
+
+.filters {
+  padding: 1rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-around;
+  gap: 0.1rem;
+
+
+}
+
+.filter-select {
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  min-width: 200px;
+  background-color: white;
+  font-size: 0.875rem;
+
+
+}
+
+table {
+  width: 110%;
+  border-collapse: collapse;
+  
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+
+th {
+  background-color: #f8fafc;
+  font-weight: 600;
+  color: #4a5568;
+
+}
+
+tr:hover {
+  background-color: #f8fafc;
+}
+
+.student-info-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.student-name {
+  color: #2c5282;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.student-name:hover {
+  text-decoration: underline;
+}
+
+/* Rating styles */
+.rating {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 180px;
+  /* yokarky son gosuldy, elementlere merkeze gecirildi */
+}
+
+.rating-icon {
+  flex-shrink: 0;
+
+}
+
+.rating-excellent {
+  background-color: #c6f6d5;
+  color: #22543d;
+  gap: 0.8rem;
+}
+
+.rating-good {
+  background-color: #bee3f8;
+  color: #2c5282;
+}
+
+.rating-average {
+  background-color: #fefcbf;
+  /* color: #744210; */
+}
+
+.rating-poor {
+  background-color: #fed7d7;
+  color: #822727;
+}
+
+/* Student details page */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2c5282;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+}
+
+.student-details {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 1rem;
+  /* max-width: max-content; */
+}
+
+.student-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.student-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.student-info {
+  flex: 1;
+}
+
+.student-info h2 {
+  margin-bottom: 1.5rem;
+  color: #1a365d;
+  font-size: 1.875rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.info-label {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.student-rating,
+.specialization {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2c5282;
+  font-weight: 500;
+}
+
+.achievements-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.achievements-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2c5282;
+  margin-bottom: 1rem;
+}
+
+.achievements-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.achievements-list li {
+  background-color: #ebf4ff;
+  color: #2c5282;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.grades-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.grades-section h3 {
+  color: #2c5282;
+  margin-bottom: 1.5rem;
+
+}
+
+.semester-tabs {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  /* justify-content: start; */
+}
+
+.semester-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #718096;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+
+/* grid sütunlarını dinamik ayarla */
+.semester-tabs.columns-1 {
+  grid-template-columns: repeat(1, 1fr);
+  float: left;
+  border-bottom: none;
+}
+
+.semester-tabs.columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.semester-tabs.columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.semester-tabs.columns-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.semester-tabs.columns-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+/* Minimum yükseklik vererek 2 semestr olsa bile alt satır hissini korur */
+.semester-tabs[class*="columns-"] {
+  min-height: 80px;
+  /* istersen ayarla */
+}
+
+
+
+
+.semester-tab:hover {
+  color: #2c5282;
+}
+
+.semester-tab.active {
+  border-bottom-color: #2c5282;
+  color: #2c5282;
+}
+
+.grades-table {
+  margin-top: 1rem;
+}
+
+.grade-performance {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.grade-performance.excellent {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.grade-performance.good {
+  background-color: #bee3f8;
+  color: #2c5282;
+}
+
+.grade-performance.average {
+  background-color: #fefcbf;
+  color: #744210;
+}
+
+/* Header styles */
+.page-header {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.page-header h1 {
+  font-size: 1.875rem;
+  color: #1a365d;
+  /* margin-bottom: 0.5rem; */
+}
+
+.page-description {
+  color: #4a5568;
+  font-size: 1.125rem;
+}
+
+#talyphaky {
+  padding-left: 50px;
+}
+
+
+/* Fakultetlerin grafikalary */
+.main {
+  text-align: center;
+
+}
+.main h1 {
+  margin-top: 10px;
+}
+
+.container-statistics {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+  justify-content: center;
+
+}
+
+.container-statistics h1 {
+  text-align: center;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 5px auto;
+  max-width: 700px;
+
+}
+
+.chart-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #333;
+  /* margin-top: 10px; */
+  text-align: center;
+}
+
+.recharts-cartesian-grid {
+  stroke: #e0e0e0;
+}
+
+.recharts-text {
+  font-size: 14px;
+  fill: #666;
+}
+
+.recharts-legend-item-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+  border: 1px solid #76b0f3 !important;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.recharts-tooltip-wrapper .recharts-tooltip-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.recharts-tooltip-wrapper .recharts-tooltip-item {
+  color: #555 !important;
+}
+
+.statistics-main #back-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+/* Gozleg */
+/* .search-area{
+margin-left: 100px;
+
+} */
+ #search-id {
+  padding: 10px;
+  border-radius: 5px; 
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  /* margin-left: 50px; */
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
+
+/* Pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.pagination-button,
+.pagination-number {
+  padding: 12px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.pagination-number.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.pagination-button:disabled {
+  background-color: #dcdcdc;
+  cursor: not-allowed;
+}
+
+
+/* reset button */
+#reset-btn {
+  padding: 6px 10px;
+ background-color: #c6f6d5;
+  color: #22543d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
